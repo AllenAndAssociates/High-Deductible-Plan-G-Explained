@@ -1,6 +1,6 @@
 """Synthesize music bed + frame-synced SFX (cue times from the voice track's word timings)."""
 import numpy as np, wave, sys
-SR = 48000; DUR = 123.3
+SR = 48000; DUR = 128.5
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
 db = lambda d: 10 ** (d / 20)
@@ -64,6 +64,7 @@ at(105.1, thud(), -10)
 at(111.2, pop(1000), -16)
 for t in (116.8, 117.25, 118.4): at(t, tone(350, .09, .05) + tone(440, .09, .05), -22)
 at(120.9, click(), -10)
+at(123.2, pop(1000), -18); at(123.6, pop(1200), -18)
 at(122.4, chord([C5/2, E5/2, G5/2, C5], 1.4, .6) + chord([C5, E5, G5], 1.4, .5), -18)
 
 # Music bed: warm Cmaj–Am–F–G pad with soft 8th-note pluck
@@ -83,7 +84,7 @@ for b in range(int(DUR / bar) + 1):
 mus /= np.abs(mus).max()
 # level automation (dB): -26 base, hard stop 56.7, resume 65.1, pause 92.5, soft resume 99.6, swell -22 at 107.2
 keys = [(0, -60), (1.0, -26), (56.65, -26), (56.7, -90), (65.0, -90), (65.8, -26), (92.4, -26), (92.6, -90), (99.5, -90), (101.5, -30),
-        (106.5, -30), (108.0, -22), (122.0, -22), (123.3, -60)]
+        (106.5, -30), (108.0, -22), (122.0, -22), (126.0, -20), (128.5, -60)]
 lv = np.interp(tt, [k[0] for k in keys], [k[1] for k in keys])
 out += mus * db(lv)
 
