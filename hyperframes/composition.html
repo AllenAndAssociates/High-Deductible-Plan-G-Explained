@@ -7,9 +7,9 @@
   :root{--navy:#005CAA;--navy2:#0268B3;--gold:#73B726;--gold2:#97C656;--coral:#E5533D;--emerald:#1E8E5A;--ink:#2D2D2D;--muted:#5B6B82;--paper:#FFFFFF;--amber:#F2A516}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{width:1080px;height:1920px;overflow:hidden;background:transparent;font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink)}
-  #bg{position:absolute;inset:0;background:radial-gradient(1200px 900px at 50% 75%,#0A5CA8 0%,#06325E 60%,#041F3D 100%)}
-  #bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(115,183,38,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(115,183,38,.07) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(#000 0%,transparent 70%)}
-  #bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:520px;background:linear-gradient(transparent,rgba(115,183,38,.10))}
+  #bg{position:absolute;inset:0;background:radial-gradient(1200px 1000px at 50% 78%,#FFFFFF 0%,#F2F7FC 45%,#DDEAF6 100%)}
+  #bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,92,170,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,92,170,.07) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(#000 0%,transparent 70%)}
+  #bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:520px;background:linear-gradient(transparent,rgba(115,183,38,.16))}
   body.fg #bg{display:none}
   .abs{position:absolute}
   /* banner */
@@ -18,12 +18,12 @@
   #banner h1 b{color:var(--gold2)}
   /* tabs */
   #tabs{left:40px;top:196px;width:1000px;height:74px;display:flex;gap:14px}
-  .tab{flex:1;border-radius:16px;background:rgba(255,255,255,.10);border:2px solid rgba(255,255,255,.22);color:#fff;font-size:30px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:10px;position:relative}
+  .tab{flex:1;border-radius:16px;background:#005CAA;border:2px solid #0268B3;color:#fff;font-size:30px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:10px;position:relative}
   .tab .chk{width:34px;height:34px;border-radius:50%;background:var(--emerald);color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;transform:scale(0)}
   .tab .hl{position:absolute;inset:-2px;border-radius:16px;background:var(--gold);opacity:0;z-index:-1}
   .tab span.t{position:relative}
   /* stage card */
-  #card{left:40px;top:292px;width:1000px;height:676px;border-radius:30px;background:var(--paper);box-shadow:0 26px 60px rgba(0,0,0,.5);overflow:hidden}
+  #card{left:40px;top:292px;width:1000px;height:676px;border-radius:30px;background:var(--paper);box-shadow:0 20px 50px rgba(0,60,120,.22);border:2px solid #D5E3F1;overflow:hidden}
   #flash{position:absolute;inset:0;background:var(--emerald);opacity:0}
   #counterRow{position:absolute;left:44px;top:30px;right:44px;display:flex;align-items:flex-end;justify-content:space-between}
   #counterRow .lbl{font-size:24px;font-weight:800;color:var(--muted);letter-spacing:2px}
@@ -82,22 +82,22 @@
   /* CTA */
   #cta{left:40px;top:292px;width:1000px;height:760px;opacity:0}
   .opt{position:absolute;left:0;width:1000px;border-radius:28px;box-shadow:0 22px 50px rgba(0,0,0,.45);padding:26px 36px}
-  #optA{top:0;height:270px;background:#fff;border:4px solid #2E6CD1}
-  #optB{top:296px;height:440px;background:linear-gradient(135deg,var(--navy),var(--navy2));border:5px solid var(--gold)}
+  #optA{top:0;height:236px;background:#fff;border:4px solid #2E6CD1}
+  #optB{top:254px;height:400px;background:linear-gradient(135deg,var(--navy),var(--navy2));border:5px solid var(--gold)}
   .opt .k{font-size:24px;font-weight:900;letter-spacing:2px}
   #optA .k{color:#2E6CD1}
   #optB .k{color:var(--gold2)}
-  #optA .big{font-size:76px;font-weight:900;color:var(--navy);margin-top:14px}
+  #optA .big{font-size:68px;font-weight:900;color:var(--navy);margin-top:8px}
   #optA .sub{font-size:28px;font-weight:700;color:var(--muted)}
-  #optB .row{display:flex;align-items:center;gap:26px;margin-top:16px}
+  #optB .row{display:flex;align-items:center;gap:26px;margin-top:10px}
   #optB .logo{width:130px;height:130px}
   #optB .logo .m{font-size:48px}
   #optB .nm{font-size:48px;font-weight:900;color:#fff;line-height:1.05}
   #optB .since{font-size:40px;line-height:1.1;font-weight:800;color:var(--gold2)}
-  #phone{font-size:68px;font-weight:900;color:#fff;margin-top:18px;font-variant-numeric:tabular-nums}
+  #phone{font-size:62px;font-weight:900;color:#fff;margin-top:10px;font-variant-numeric:tabular-nums}
   #web{font-size:40px;font-weight:800;color:var(--gold2);margin-top:2px;position:relative;display:inline-block}
   #cursor{position:absolute;width:44px;height:44px;left:0;top:0;opacity:0}
-  #disc{left:40px;top:1868px;width:1000px;text-align:center;font-size:17px;color:rgba(255,255,255,.55);font-weight:600}
+  #disc{left:40px;top:1868px;width:1000px;text-align:center;font-size:17px;color:rgba(45,45,45,.6);font-weight:600}
 </style>
 </head>
 <body>
@@ -168,7 +168,7 @@
 <div id="cta" class="abs">
   <div class="opt" id="optA"><div class="k">OPTION 1 · SELF-SERVICE PRICE COMPARISON</div><div class="big">🌐 Medicare.gov</div><div class="sub">Official U.S. Government Plan Comparison</div></div>
   <div class="opt" id="optB"><div class="k">OPTION 2 · SPEAK WITH A CONSULTANT</div>
-    <div class="row"><div style="background:#fff;border-radius:18px;padding:14px 22px"><img src="logo.png" style="width:440px;display:block"></div><div class="since">Since<br>1994</div></div>
+    <div class="row"><div style="background:#fff;border-radius:18px;padding:14px 22px"><img src="logo.png" style="width:380px;display:block"></div><div class="since">Since<br>1994</div></div>
     <div id="phone">📞 800-324-9986</div>
     <div id="web">🌐 allenandassociates.agency
       <svg id="cursor" viewBox="0 0 24 24"><path d="M3 2 L3 20 L8 15 L11.5 22 L14.5 20.5 L11 13.8 L18 13.8Z" fill="#fff" stroke="#000" stroke-width="1.5"/></svg>

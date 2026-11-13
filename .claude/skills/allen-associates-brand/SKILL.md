@@ -31,3 +31,16 @@ Semantic extras (not brand, only for meaning): warning amber `#F2A516`, alert re
 ## Video defaults
 - 9:16, 1080×1920. Talking head in intro and CTA only; full-screen B-roll graphics in between.
 - Logo appears on the authority card (intro) and on the consultant CTA card (outro).
+
+## Avatar contrast rule (always check)
+Before choosing a background, look at a frame of the avatar/talking-head video and judge the outfit.
+- **Dark outfit** (navy, blue, black, charcoal — Arric's usual navy shirt): the area behind the avatar must be **light**. Use white or a soft tint, e.g. `#FFFFFF` → `#EAF3FB` (light blue-white) or `#F1F8E6` (light green-white). Never brand Deep Blue behind a blue/dark outfit.
+- **Light outfit** (white, light blue, pastel, beige): use a **dark** background behind the avatar, e.g. Deep Blue `#06325E` → `#005CAA`.
+- Applies at minimum to the region where the avatar appears; the rest of the frame may differ.
+- When the background is light, switch anything sitting directly on it (inactive tabs, disclaimers, captions) to dark/brand-blue text so it stays readable.
+
+## Avatar head clearance rule (always)
+Nothing may cover or sit on top of the avatar's head whenever the avatar is on screen: no cards, banners, captions, stickers or overlays.
+- Keep every graphic's bottom edge at least 50px above the top of the head, including during punch-in/zoom moments (compute the head position at the largest scale used).
+- If content doesn't fit, shrink or shorten the graphics or move the avatar down; never let them overlap the head.
+- Verify by checking stills at each avatar scale change before final render.
