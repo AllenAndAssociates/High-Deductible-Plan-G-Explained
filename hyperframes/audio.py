@@ -67,6 +67,7 @@ at(120.9, click(), -10)
 at(123.2, pop(1000), -18); at(123.6, pop(1200), -18)
 at(122.4, chord([C5/2, E5/2, G5/2, C5], 1.4, .6) + chord([C5, E5, G5], 1.4, .5), -18)
 
+out *= db(-9)  # SFX sit well under the voice
 # Music bed: warm Cmaj–Am–F–G pad with soft 8th-note pluck
 bpm = 96; beat = 60 / bpm; prog = [[261.6, 329.6, 392.0], [220.0, 261.6, 329.6], [174.6, 220.0, 261.6], [196.0, 246.9, 293.7]]
 mus = np.zeros(N); bar = 4 * beat; tt = np.arange(N) / SR
@@ -86,6 +87,7 @@ mus /= np.abs(mus).max()
 keys = [(0, -60), (1.0, -26), (56.65, -26), (56.7, -90), (65.0, -90), (65.8, -26), (92.4, -26), (92.6, -90), (99.5, -90), (101.5, -30),
         (106.5, -30), (108.0, -22), (122.0, -22), (126.0, -20), (128.5, -60)]
 lv = np.interp(tt, [k[0] for k in keys], [k[1] for k in keys])
+lv = np.where(tt < 122.6, lv - 9, lv - 3)  # music bed well under voice; slightly fuller on end card
 out += mus * db(lv)
 
 # voice
